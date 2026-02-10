@@ -15,21 +15,22 @@ export default function Navbar() {
 
     return (
         <Box>
-            <AppBar position="static" sx={{ backgroundColor: 'white' , boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.1)'  } }>
-                <Toolbar sx={{display:'flex'}} >
+            <AppBar position="static" sx={{ backgroundColor: 'white', boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.1)' }}>
+                <Toolbar sx={{ display: 'flex' }} >
                     <IconButton>
-                        <MenuIcon sx={{ display: { xs: 'flex', sm: 'none' } }} />
+                        <MenuIcon sx={{ display: { xs: 'flex', md: 'none' } }} />
                     </IconButton>
                     <Typography variant="h6" component="div" sx={{ flexGrow: .5, color: 'black' }}>
                         HomeLuxe
                     </Typography>
-                    <Box sx={{ display: { xs: 'none', sm: 'flex', alignItems:'center' }, gap: 3 }}>
+                    <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', gap: 3 }}>
                         <Link component={RouterLink} to={'/'} underline='none' sx={{ color: 'rgb(144, 151, 155) ' }}>Home</Link >
                         <Link component={RouterLink} to={'/shop'} underline='none' sx={{ color: 'rgb(144, 151, 155) ' }}>Shop</Link >
                         <Link component={RouterLink} to={'/product'} underline='none' sx={{ color: 'rgb(144, 151, 155) ' }}>Product</Link >
                         <Link component={RouterLink} to={'/contact'} underline='none' sx={{ color: 'rgb(144, 151, 155) ' }}>Contact Us</Link >
+                        <Link component={RouterLink} to={'/register'} underline='none' sx={{ color: 'rgb(144, 151, 155) ' }}>Register</Link >
                     </Box>
-                    <Box sx={{display:'flex' ,marginLeft:'auto' , gap:2}}>
+                    <Box sx={{ display: 'flex', marginLeft: 'auto' , gap:2 }}>
                         <IconButton >
                             <SearchIcon sx={{ color: 'black', display: { xs: 'none', sm: 'flex' } }} />
                         </IconButton>

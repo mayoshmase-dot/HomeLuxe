@@ -1,0 +1,10 @@
+import * as yup from 'yup';
+
+export const LoginSchema = yup.object({
+    identifier: yup
+        .string().required("Username or Email is required"),
+
+    password: yup.string().required("Password is required").min(8, "Password must be at least 8 characters")
+        .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$/,
+            "Password must include uppercase, lowercase, number and special character")
+});
